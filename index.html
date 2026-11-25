@@ -4,7 +4,7 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta name="description" content="UX/UI and Web Designer portfolio">
-  <title> &amp; Web Designer — Portfolio</title>
+  <title>Sniazhana Haiduchonak — UX/UI & Web Designer</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
@@ -23,12 +23,11 @@
 
     <main id="home">
       <section class="hero" aria-labelledby="hero-title">
-        <div class="portrait-placeholder" aria-label="Portrait placeholder">
-          <span>PHOTO</span>
-        </div>
+        <!-- Фото -->
+        <img class="portrait" src="images/avatar.jpg" alt="Sniazhana Haiduchonak">
 
         <p class="eyebrow">UX/UI &amp; WEB DESIGNER</p>
-        <h1 id="hero-title">Hi, I’m [Sniazhana Haiduchonak],<br>UX/UI &amp; Web Designer</h1>
+        <h1 id="hero-title">Hi, I’m Sniazhana Haiduchonak,<br>UX/UI &amp; Web Designer</h1>
         <p class="intro">
           I design thoughtful digital experiences, combining clear structure,
           intuitive interactions and purposeful visual design.
@@ -46,17 +45,52 @@
           <p class="eyebrow">01 / SELECTED WORK</p>
           <p class="section-note">A selection of UX/UI and web design projects.</p>
         </div>
-        <div class="work-placeholder">Projects will be added here.</div>
+        
+        <!-- Сетка проектов -->
+        <div class="work-grid">
+          <article class="project-card">
+            <img class="project-image" src="images/project-1.jpg" alt="Project 1 preview">
+            <div class="project-content">
+              <h3 class="project-title">Project One</h3>
+              <p class="project-description">
+                A short description of the project: the problem, your role and the outcome.
+              </p>
+              <a class="project-link" href="#" aria-label="View Project One">View project <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+
+          <article class="project-card">
+            <img class="project-image" src="images/project-2.jpg" alt="Project 2 preview">
+            <div class="project-content">
+              <h3 class="project-title">Project Two</h3>
+              <p class="project-description">
+                Another project description. Keep it concise and focused on results.
+              </p>
+              <a class="project-link" href="#" aria-label="View Project Two">View project <span aria-hidden="true">↗</span></a>
+            </div>
+          </article>
+        </div>
       </section>
 
       <section class="section" id="about">
         <p class="eyebrow">02 / ABOUT</p>
+        <h2>Design with clarity and purpose.</h2>
+        <p class="section-note">
+          I’m a UX/UI and web designer focused on creating clean, usable interfaces.
+          [Add a sentence about your background, tools or what you’re looking for.]
+        </p>
       </section>
 
       <section class="section" id="contact">
         <p class="eyebrow">03 / CONTACT</p>
         <h2>Have a project in mind?</h2>
         <p class="section-note">Let’s talk.</p>
+        <a class="button" href="mailto:you@example.com">you@example.com <span aria-hidden="true">↗</span></a>
+        <div class="hero-meta" style="margin-top: 32px;">
+          <a href="https://github.com/your-username" target="_blank" rel="noopener">GitHub</a>
+          <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a>
+          <a href="https://t.me/your-username" target="_blank" rel="noopener">Telegram</a>
+        </div>
       </section>
     </main>
   </div>
