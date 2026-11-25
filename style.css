@@ -42,8 +42,9 @@ a { color: inherit; text-decoration: none; }
 
 .wordmark {
   font-size: 16px;
-  font-weight: 700;
-  letter-spacing: -.035em;
+  font-weight: 600;
+  letter-spacing: 0.06em;
+  word-spacing: 0.35em;
 }
 
 .navigation {
@@ -69,17 +70,15 @@ a { color: inherit; text-decoration: none; }
   align-items: flex-start;
 }
 
-.portrait-placeholder {
+/* Фото профиля */
+.portrait {
   width: 92px;
   aspect-ratio: 1;
   margin-bottom: 34px;
-  display: grid;
-  place-items: center;
-  border: 1px solid rgb(245 245 245 / 24%);
+  object-fit: cover;
   border-radius: 50%;
-  color: var(--secondary);
-  font-size: 11px;
-  letter-spacing: .1em;
+  border: 1px solid rgb(245 245 245 / 24%);
+  background: rgb(245 245 245 / 10%); /* Заглушка, если фото не загрузится */
 }
 
 .eyebrow {
@@ -163,15 +162,67 @@ h1 {
   line-height: 1.6;
 }
 
-.work-placeholder {
-  min-height: 240px;
+/* Сетка проектов */
+.work-grid {
   margin-top: 42px;
   display: grid;
-  place-items: center;
-  border: 1px solid rgb(245 245 245 / 12%);
-  color: var(--secondary);
-  font-size: 16px;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 24px;
 }
+
+.project-card {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid rgb(245 245 245 / 12%);
+  border-radius: 16px;
+  overflow: hidden;
+  background: rgb(245 245 245 / 2%);
+  transition: transform .2s ease, border-color .2s ease;
+}
+
+.project-card:hover {
+  transform: translateY(-4px);
+  border-color: rgb(245 245 245 / 24%);
+}
+
+.project-image {
+  width: 100%;
+  aspect-ratio: 16 / 10;
+  object-fit: cover;
+  display: block;
+  background: rgb(245 245 245 / 6%);
+}
+
+.project-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.project-title {
+  margin: 0;
+  font-size: 20px;
+  font-weight: 600;
+  letter-spacing: -.02em;
+}
+
+.project-description {
+  margin: 0;
+  color: var(--secondary);
+  font-size: 15px;
+  line-height: 1.55;
+}
+
+.project-link {
+  margin-top: 6px;
+  color: var(--accent);
+  font-size: 14px;
+  font-weight: 600;
+  transition: color .2s ease;
+}
+
+.project-link:hover { color: #52748E; }
 
 h2 {
   margin: 32px 0 14px;
@@ -193,7 +244,7 @@ h2 {
   .navigation { gap: 15px; }
   .navigation a { font-size: 14px; }
   .hero { min-height: calc(100svh - 94px); padding-top: 48px; }
-  .portrait-placeholder { width: 76px; margin-bottom: 28px; }
+  .portrait { width: 76px; margin-bottom: 28px; }
   .eyebrow { font-size: 13px; }
   h1 { font-size: clamp(36px, 8.8vw, 50px); }
   .intro { margin-top: 20px; font-size: 17px; }
