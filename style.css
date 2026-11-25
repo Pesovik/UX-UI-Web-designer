@@ -161,10 +161,7 @@ h1 {
   line-height: 1.6;
 }
 
-/* =========================================
-   НОВЫЕ СТИЛИ ДЛЯ ПРОЕКТОВ (БЕЗ РАМОК)
-   ========================================= */
-
+/* WORK GRID */
 .work-grid {
   margin-top: 42px;
   display: grid;
@@ -176,9 +173,9 @@ h1 {
   display: flex;
   flex-direction: column;
   gap: 20px;
-  border: none; /* Убираем рамку */
-  background: transparent; /* Убираем фон */
-  padding: 0; /* Убираем внутренние отступы */
+  border: none;
+  background: transparent;
+  padding: 0;
 }
 
 .project-content {
@@ -234,17 +231,7 @@ h1 {
   transform: scale(1.03);
 }
 
-/* ========================================= */
-
-h2 {
-  margin: 32px 0 14px;
-  font-size: clamp(36px, 5vw, 64px);
-  font-weight: 500;
-  letter-spacing: -.04em;
-}
-/* =========================================
-   СТИЛИ ДЛЯ СЕКЦИИ ABOUT
-   ========================================= */
+/* ABOUT SECTION */
 .about-grid {
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -255,7 +242,7 @@ h2 {
 
 .about-text, 
 .about-details {
-  min-width: 0; /* Запрещает колонкам растягиваться */
+  min-width: 0;
 }
 
 .about-text p {
@@ -314,13 +301,22 @@ h2 {
   display: inline-block;
 }
 
-/* Мобильная версия для About (в одну колонку) */
+/* HEADINGS */
+h2 {
+  margin: 32px 0 14px;
+  font-size: clamp(36px, 5vw, 64px);
+  font-weight: 500;
+  letter-spacing: -.04em;
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 800px) {
   .about-grid {
     grid-template-columns: 1fr;
     gap: 40px;
   }
 }
+
 @media (max-width: 700px) {
   .site-frame {
     width: calc(100% - 20px);
