@@ -1,0 +1,184 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="АРКА 123 Case Study">
+  <title>АРКА 123 — Case Study</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    /* Дополнительные стили для страницы кейса */
+    .case-hero {
+      padding: 80px 0 40px;
+    }
+    .back-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--secondary);
+      font-size: 14px;
+      margin-bottom: 40px;
+      transition: color 0.2s ease;
+    }
+    .back-link:hover {
+      color: var(--primary);
+    }
+    .case-title {
+      font-size: clamp(40px, 6vw, 72px);
+      line-height: 1.1;
+      margin: 0 0 24px;
+    }
+    .case-subtitle {
+      font-size: 20px;
+      color: var(--secondary);
+      max-width: 800px;
+      line-height: 1.6;
+      margin-bottom: 48px;
+    }
+    .case-image-full {
+      width: 100%;
+      border-radius: 16px;
+      margin-bottom: 64px;
+      border: 1px solid rgb(245 245 245 / 10%);
+    }
+    .case-content {
+      max-width: 800px;
+      margin: 0 auto;
+      padding-bottom: 80px;
+    }
+    .case-section {
+      margin-bottom: 64px;
+    }
+    .case-section h2 {
+      font-size: 32px;
+      margin-bottom: 24px;
+      border-bottom: 1px solid rgb(245 245 245 / 10%);
+      padding-bottom: 16px;
+    }
+    .case-section p {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--secondary);
+      margin-bottom: 16px;
+    }
+    .case-section ul {
+      list-style: none;
+      padding: 0;
+    }
+    .case-section ul li {
+      font-size: 18px;
+      line-height: 1.7;
+      color: var(--secondary);
+      margin-bottom: 16px;
+      padding-left: 24px;
+      position: relative;
+    }
+    .case-section ul li::before {
+      content: '•';
+      color: var(--accent);
+      position: absolute;
+      left: 0;
+      font-weight: bold;
+    }
+    .case-tools {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 12px;
+      margin-top: 32px;
+    }
+    .case-tools span {
+      padding: 8px 16px;
+      background: rgb(245 245 245 / 5%);
+      border: 1px solid rgb(245 245 245 / 10%);
+      border-radius: 999px;
+      font-size: 14px;
+      color: var(--primary);
+    }
+  </style>
+</head>
+<body>
+  <div class="site-frame">
+    <header class="header">
+      <a class="wordmark" href="index.html" aria-label="Homepage">SNIAZHANA HAIDUCHONAK</a>
+      <nav class="navigation" aria-label="Main navigation">
+        <a href="index.html">Home</a>
+        <a href="index.html#about">About</a>
+        <a href="index.html#contact">Contact</a>
+      </nav>
+    </header>
+
+    <main class="case-hero">
+      <a href="index.html" class="back-link">← Back to Portfolio</a>
+      
+      <h1 class="case-title">АРКА 123 — Premium Event Space</h1>
+      <p class="case-subtitle">
+        Complete website development from scratch in 9 hours using only AI tools. 
+        Featuring a custom 3D room, brand character, and animated logo.
+      </p>
+
+      <!-- Сюда вставьте главную обложку кейса (например, кадр с девушкой на фоне окна) -->
+      <img class="case-image-full" src="images/project-arka.jpg" alt="АРКА 123 Hero Image">
+
+      <div class="case-content">
+        
+        <div class="case-section">
+          <h2>The Challenge</h2>
+          <p>
+            The task was to create a complete website for a premium event space (АРКА 123) 
+            that highlights its unique features: huge arched windows with a view of the National Library. 
+            The project required not just design, but a full-cycle development: 
+            3D visualization, a brand character, and complex animations.
+          </p>
+        </div>
+
+        <div class="case-section">
+          <h2>How I Did It (AI Workflow)</h2>
+          <p>
+            I acted as an AI Art Director, managing various neural networks to achieve the final result 
+            in just 9 hours:
+          </p>
+          <ul>
+            <li><strong>Logo Animation:</strong> Generated precise CSS/JS code using Claude to create a spring animation of letters and drawing an arch.</li>
+            <li><strong>Brand Character:</strong> Developed a detailed prompt for a consistent image of a woman in a classic suit with a logo brooch, then animated it using Kling AI.</li>
+            <li><strong>3D Room:</strong> Created a 3D scene with real layout preserved (windows 4x3.5m) using Gemini and Claude.</li>
+            <li><strong>Website Code:</strong> Generated clean HTML/CSS/JS for all blocks (header, services, pricing, reviews) using Claude Pro.</li>
+          </ul>
+          
+          <div class="case-tools">
+            <span>Claude Pro</span>
+            <span>Gemini</span>
+            <span>Kling AI</span>
+            <span>Midjourney</span>
+          </div>
+        </div>
+
+        <div class="case-section">
+          <h2>The Result</h2>
+          <p>
+            A fully interactive website that fully meets the technical requirements. 
+            This project demonstrates the power of prompt engineering and the ability to manage 
+            multiple AI tools to replace a traditional development team.
+          </p>
+          <p><strong>Time spent: 9 hours.</strong></p>
+          
+          <!-- Кнопка перехода на живой сайт -->
+          <a class="button" href="https://pesovik.github.io/Arka-123/" target="_blank" rel="noopener" style="margin-top: 24px;">
+            View live site <span aria-hidden="true">↗</span>
+          </a>
+        </div>
+
+        <!-- Блок с картинкой персонажа (если загрузите) -->
+        <div class="case-section">
+          <h2>Character Design</h2>
+          <p>AI-generated consistent character for the brand presentation.</p>
+          <img class="case-image-full" src="images/arka-character.jpg" alt="Brand Character">
+        </div>
+
+      </div>
+    </main>
+  </div>
+</body>
+</html>
