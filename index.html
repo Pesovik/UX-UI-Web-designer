@@ -203,6 +203,27 @@
       </section>
     </main>
   </div>
+    <script>
+    const scrollToTopBtn = document.getElementById("scrollToTopBtn");
+
+    // Отслеживаем прокрутку страницы
+    window.onscroll = function() {
+      // Если прокрутили больше 300 пикселей вниз
+      if (document.body.scrollTop > 300 || document.documentElement.scrollTop > 300) {
+        scrollToTopBtn.classList.add("show"); // Показываем кнопку
+      } else {
+        scrollToTopBtn.classList.remove("show"); // Скрываем кнопку
+      }
+    };
+
+    // При клике на кнопку
+    scrollToTopBtn.addEventListener("click", function() {
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth" // Плавная прокрутка
+      });
+    });
+  </script>
 </body>
 </html>
 
