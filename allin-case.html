@@ -10,12 +10,36 @@
   <link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
   <style>
-    /* Стили для кейса в стиле Anton Nevin */
+    /* =========================================
+       СТИЛИ ДЛЯ СТРАНИЦЫ КЕЙСА ALL IN
+       ========================================= */
     .case-hero { padding: 80px 0 40px; }
-    .back-link { display: inline-flex; align-items: center; gap: 8px; color: var(--secondary); font-size: 14px; margin-bottom: 40px; transition: color 0.2s ease; }
+    
+    .back-link { 
+      display: inline-flex; 
+      align-items: center; 
+      gap: 8px; 
+      color: var(--secondary); 
+      font-size: 14px; 
+      margin-bottom: 40px; 
+      transition: color 0.2s ease; 
+    }
     .back-link:hover { color: var(--primary); }
-    .case-title { font-size: clamp(28px, 4vw, 42px); line-height: 1.2; margin: 0 0 24px; letter-spacing: -.02em; }
-    .case-intro { font-size: 20px; color: var(--secondary); max-width: 800px; line-height: 1.6; margin-bottom: 64px; }
+    
+    .case-title { 
+      font-size: clamp(28px, 4vw, 42px); 
+      line-height: 1.2; 
+      margin: 0 0 24px; 
+      letter-spacing: -.02em; 
+    }
+    
+    .case-intro { 
+      font-size: 20px; 
+      color: var(--secondary); 
+      max-width: 900px; 
+      line-height: 1.6; 
+      margin-bottom: 64px; 
+    }
     
     /* Блок Summary */
     .case-summary-grid {
@@ -26,26 +50,127 @@
       padding-bottom: 40px;
       border-bottom: 1px solid rgb(245 245 245 / 10%);
     }
-    .summary-block h4 { font-size: 13px; text-transform: uppercase; letter-spacing: 0.05em; color: var(--secondary); margin: 0 0 16px; }
+    .summary-block h4 { 
+      font-size: 13px; 
+      text-transform: uppercase; 
+      letter-spacing: 0.05em; 
+      color: var(--secondary); 
+      margin: 0 0 16px; 
+    }
     .summary-block ul { list-style: none; padding: 0; margin: 0; }
-    .summary-block li { font-size: 14px; line-height: 1.5; color: var(--primary); margin-bottom: 8px; }
-    .summary-block p { font-size: 14px; line-height: 1.5; color: var(--primary); margin: 0; }
+    .summary-block li { 
+      font-size: 14px; 
+      line-height: 1.5; 
+      color: var(--primary); 
+      margin-bottom: 8px; 
+    }
+    .summary-block p { 
+      font-size: 14px; 
+      line-height: 1.5; 
+      color: var(--primary); 
+      margin: 0; 
+    }
 
-    .case-content { max-width: 800px; margin: 0 auto; padding-bottom: 80px; }
+    /* Основной контент */
+    .case-content { 
+      max-width: 1000px; 
+      margin: 0 auto; 
+      padding-bottom: 80px; 
+    }
+    
     .case-section { margin-bottom: 80px; }
-    .case-section h2 { font-size: 28px; margin-bottom: 24px; border-bottom: 1px solid rgb(245 245 245 / 10%); padding-bottom: 16px; }
-    .case-section h3 { font-size: 20px; margin: 32px 0 16px; color: var(--primary); }
-    .case-section p { font-size: 18px; line-height: 1.7; color: var(--secondary); margin-bottom: 24px; }
+    
+    .case-section h2 { 
+      font-size: 28px; 
+      margin-top: 0; 
+      margin-bottom: 32px; 
+      border-bottom: 1px solid rgb(245 245 245 / 10%); 
+      padding-bottom: 16px; 
+    }
+    
+    .case-section p { 
+      font-size: 18px; 
+      line-height: 1.7; 
+      color: var(--secondary); 
+      margin-bottom: 24px; 
+    }
+    
     .case-section ul { list-style: none; padding: 0; }
-    .case-section ul li { font-size: 18px; line-height: 1.7; color: var(--secondary); margin-bottom: 16px; padding-left: 24px; position: relative; }
-    .case-section ul li::before { content: '•'; color: var(--accent); position: absolute; left: 0; font-weight: bold; }
+    .case-section ul li { 
+      font-size: 18px; 
+      line-height: 1.7; 
+      color: var(--secondary); 
+      margin-bottom: 16px; 
+      padding-left: 24px; 
+      position: relative; 
+    }
+    .case-section ul li::before { 
+      content: '•'; 
+      color: var(--accent); 
+      position: absolute; 
+      left: 0; 
+      font-weight: bold; 
+    }
     
-    .case-image-full { width: 100%; border-radius: 16px; margin-bottom: 32px; border: 1px solid rgb(245 245 245 / 10%); display: block; }
-    
-    /* Стили для нумерованных проблем */
-    .problem-item { margin-bottom: 32px; }
-    .problem-item .problem-number { font-size: 14px; color: var(--accent); font-weight: 600; display: block; margin-bottom: 8px; }
-    .problem-item h3 { margin-top: 0; font-size: 22px; }
+    /* Блок проблем */
+    .problem-item { 
+      margin-bottom: 48px; 
+      padding-left: 24px; 
+      border-left: 1px solid rgba(245, 245, 245, 0.1); 
+    }
+    .problem-item .problem-number { 
+      font-size: 14px; 
+      color: var(--accent); 
+      font-weight: 600; 
+      display: block; 
+      margin-bottom: 8px; 
+    }
+    .problem-item h3 { 
+      margin-top: 0; 
+      margin-bottom: 8px; 
+      font-size: 22px; 
+      line-height: 1.3;
+    }
+    .problem-item p {
+      margin-top: 0;
+      margin-bottom: 0;
+      font-size: 18px;
+      line-height: 1.6;
+      color: var(--secondary);
+    }
+
+    /* Картинки */
+    .case-image-full { 
+      width: 100%; 
+      border-radius: 16px; 
+      margin-bottom: 32px; 
+      border: 1px solid rgba(245, 245, 245, 0.05); 
+      background: #171A1E; /* Темная подложка, которую вы выбрали */
+      padding: 24px; 
+      display: block; 
+      object-fit: contain; 
+    }
+
+    /* Сетка для экранов приложения (All Screens) */
+    .screens-grid {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+    .screens-grid img {
+      width: 100%;
+      height: auto;
+      border-radius: 16px;
+      border: 1px solid rgba(245, 245, 245, 0.05);
+      background: #171A1E;
+      padding: 16px;
+      display: block;
+      transition: transform 0.3s ease;
+    }
+    .screens-grid img:hover {
+      transform: scale(1.02);
+    }
 
     /* Адаптив */
     @media (max-width: 900px) {
@@ -53,6 +178,7 @@
     }
     @media (max-width: 600px) {
       .case-summary-grid { grid-template-columns: 1fr; gap: 24px; }
+      .screens-grid { grid-template-columns: 1fr; }
     }
   </style>
 </head>
@@ -80,7 +206,7 @@
       <!-- Главная обложка -->
       <img class="case-image-full" src="images/allin-hero.png" alt="All in App Hero Image">
 
-      <!-- Блок Summary (как у Антона) -->
+      <!-- Блок Summary -->
       <div class="case-summary-grid">
         <div class="summary-block">
           <h4>Objectives</h4>
@@ -142,8 +268,6 @@
         <div class="case-section">
           <h2>Unify all assets into one clear dashboard</h2>
           <p>I redesigned the portfolio dashboard to allow users to include all assets in one place. The new dashboard uses a dark theme and the Manrope font, with a custom color palette (Orange #FF9E6E) to highlight key metrics.</p>
-          
-          <!-- Картинка с экранами (скачайте с Behance) -->
           <img class="case-image-full" src="images/allin-solution.png" alt="Unified Dashboard" loading="lazy">
         </div>
 
@@ -151,8 +275,6 @@
         <div class="case-section">
           <h2>Add AI insights to clarify risk</h2>
           <p>To help users better understand their portfolio risk, I added an AI Insights section. This feature analyzes market context and provides clear, understandable recommendations without overwhelming the user.</p>
-          
-          <!-- Картинка с AI Insights -->
           <img class="case-image-full" src="images/allin-ai.png" alt="AI Insights" loading="lazy">
         </div>
 
@@ -160,9 +282,21 @@
         <div class="case-section">
           <h2>Design return paths, not isolated features</h2>
           <p>The information architecture was built to connect onboarding, dashboard, portfolio, analytics, insights, markets, and settings. User interviews and the "David Chen" persona guided the design decisions, ensuring that the navigation felt natural.</p>
-          
-          <!-- Картинка с IA или экранами -->
           <img class="case-image-full" src="images/allin-research.png" alt="User Research and IA" loading="lazy">
+        </div>
+
+        <!-- Все экраны -->
+        <div class="case-section">
+          <h2>All Screens</h2>
+          <p>A complete overview of the user journey, from onboarding to deep analytics and profile settings.</p>
+          
+          <div class="screens-grid">
+            <!-- Замените эти картинки на ваши нарезанные экраны -->
+            <img src="images/allin-screen-1.png" alt="Onboarding" loading="lazy">
+            <img src="images/allin-screen-2.png" alt="Dashboard" loading="lazy">
+            <img src="images/allin-screen-3.png" alt="Analytics" loading="lazy">
+            <img src="images/allin-screen-4.png" alt="Insights" loading="lazy">
+          </div>
         </div>
 
         <!-- Что я узнала -->
