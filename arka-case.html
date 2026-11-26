@@ -112,7 +112,7 @@
     @media (max-width: 700px) {
       .image-grid { grid-template-columns: 1fr; }
     }
-        /* Сетка из 3 колонок для видео */
+           /* Сетка из 3 колонок для видео */
     .image-grid-three {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
@@ -120,12 +120,23 @@
       margin-bottom: 24px;
     }
 
-    /* Адаптив: на планшетах 2 колонки, на телефонах 1 */
+    /* Делаем все картинки в этой сетке одинаковыми по размеру */
+    .image-grid-three .case-image-full {
+      aspect-ratio: 4 / 3; /* Пропорции: можно поменять на 16 / 9, если хотите шире */
+      object-fit: cover;   /* Обрезает лишнее, чтобы картинка заполнила блок без искажений */
+      height: 100%;
+      margin-bottom: 0;    /* Убираем отступ снизу, так как сетка уже дает gap */
+    }
+
+    /* Адаптив */
     @media (max-width: 900px) {
       .image-grid-three { grid-template-columns: repeat(2, 1fr); }
     }
     @media (max-width: 600px) {
       .image-grid-three { grid-template-columns: 1fr; }
+      .image-grid-three .case-image-full {
+        aspect-ratio: auto; /* На телефоне пусть будут своего размера */
+      }
     }
   </style>
 </head>
@@ -183,7 +194,7 @@
           <h2>Hero Video Generation</h2>
           <p>The brand hero is presented through a series of video scenes. I used AI tools to generate the base images and then animate them into smooth video transitions.</p>
           
-          <h3>Source Frames (Generated with Midjourney)</h3>
+          <h3>Source Frames (Generated with Kling AI)</h3>
           
           <!-- Сетка из 3 колонок для видео-кадров -->
           <div class="image-grid-three">
