@@ -74,11 +74,15 @@
     /* Основной контент */
     .case-content { 
       max-width: 1000px; 
-      margin: 0 auto; 
+      margin: 0; 
       padding-bottom: 80px; 
     }
     
-    .case-section { margin-bottom: 64px; } /* Уменьшили отступ между секциями */
+       .case-section { 
+      margin-bottom: 64px; 
+      max-width: 1000px; /* Ограничиваем ширину текста для читаемости */
+      padding-left: 0; 
+    }
     
     .case-section h2 { 
       font-size: 28px; 
