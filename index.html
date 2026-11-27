@@ -31,7 +31,9 @@
           I design thoughtful digital experiences, combining clear structure,
           intuitive interactions and purposeful visual design.
         </p>
-        <a class="button" href="#contact">Get in touch <span aria-hidden="true">↗</span></a>
+        <a class="button-cta" href="https://www.linkedin.com/in/haiduchonok-sniazhana-0785b830b" target="_blank" rel="noopener">
+  Let's talk
+</a>
 
         <div class="hero-meta">
           <span>PORTFOLIO / 2026</span>
@@ -166,8 +168,12 @@
                   <span class="date">Dec 2022 – Jun 2023</span>
                 </li>
                 <li>
-                  <strong>Stepik</strong> — Web Design in Figma (online)<br>
-                  <span class="date">Jul 2023 – Nov 2023</span>
+                  <strong>Stepik</strong> — Web Design in Figma: From Beginner to Pro. Fundamentals of UX/UI Web Design (online)<br>
+                  <span class="date">Jul 2023 – Aug 2023</span>
+                </li>
+                <li>
+                  <strong>Stepik</strong> — Web Design in Figma: Animations and Key Usability Rules (online)<br>
+                  <span class="date">Sep 2023 – Nov 2023</span>
                 </li>
                 <li>
                   <strong>Andersen lab, Minsk</strong> — UX/UI Intensive<br>
@@ -190,20 +196,39 @@
         </div>
       </section>
 
-      <!-- CONTACT -->
-      <section class="section" id="contact">
-        <p class="eyebrow">03 / CONTACT</p>
-        <h2>Have a project in mind?</h2>
-        <p class="section-note">Let’s talk.</p>
-        <a class="button" href="mailto:snegennika@gmail.com">snegennika@gmail.com <span aria-hidden="true">↗</span></a>
-        <div class="hero-meta" style="margin-top: 32px;">
-          <a href="https://www.linkedin.com/in/your-username" target="_blank" rel="noopener">LinkedIn</a>
-          <a href="https://t.me/your-username" target="_blank" rel="noopener">Telegram</a>
+            <!-- CONTACT -->
+      <section class="section" id="contact" style="border-top: none; padding-bottom: 32px;">
+        <!-- Блок с контактами (CTA) -->
+        <div class="cta-block">
+          <div class="cta-content">
+            <h2>Open for new opportunities</h2>
+            <p>Feel free to reach out for collaborations or just a friendly chat.</p>
+          </div>
+          <div class="cta-actions">
+            <!-- Ссылку на LinkedIn не забудьте поменять на свою -->
+            <a class="button-cta" href="www.linkedin.com/in/haiduchonok-sniazhana-0785b830b" target="_blank" rel="noopener">
+              Let's talk on LinkedIn 
+            </a>
+            <a class="cta-link" href="mailto:snegennika@gmail.com">
+              Email me 
+            </a>
+          </div>
         </div>
       </section>
     </main>
   </div>
-    <script>
+
+    </main>
+  </div>
+   
+    <!-- Кнопка Наверх -->
+  <button id="scrollToTopBtn" class="scroll-to-top" aria-label="Scroll to top">
+    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+      <path d="M12 19V5M5 12l7-7 7 7"/>
+    </svg>
+  </button>
+
+  <script>
     const scrollToTopBtn = document.getElementById("scrollToTopBtn");
 
     // Отслеживаем прокрутку страницы

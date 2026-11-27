@@ -114,7 +114,7 @@ h1 {
   align-items: center;
   gap: 18px;
   border: 1px solid var(--accent);
-  border-radius: 999px;
+  border-radius: 12px;
   background: var(--accent);
   font-size: 15px;
   font-weight: 600;
@@ -122,8 +122,9 @@ h1 {
 }
 
 .button:hover {
-  background: #52748E;
-  transform: translateY(-2px);
+  background: #52748E; /* Более светлый оттенок синего (был #52748E) */
+  border-color: #52748E;
+  transform: translateY(-2px); /* Легкий подскок вверх */
 }
 
 .hero-meta {
@@ -202,11 +203,11 @@ h1 {
 }
 
 .project-tags span {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: 500;
-  padding: 4px 12px;
+  padding: 6px 12px;
   background: rgb(245 245 245 / 10%);
-  border-radius: 999px;
+  border-radius: 8px;
   color: var(--primary);
 }
 
@@ -303,7 +304,7 @@ h1 {
 }
 
 .detail-title {
-  font-size: 13px;
+  font-size: 15px;
   font-weight: 600;
   letter-spacing: 0.05em;
   color: var(--primary);
@@ -323,7 +324,7 @@ h1 {
 }
 
 .detail-list li {
-  font-size: 14px;
+  font-size: 15px;
   line-height: 1.5;
   color: var(--secondary);
   overflow-wrap: break-word; 
@@ -336,7 +337,7 @@ h1 {
 }
 
 .detail-list .date {
-  font-size: 13px;
+  font-size: 15px;
   opacity: 0.7;
   margin-top: 2px;
   display: inline-block;
@@ -444,4 +445,119 @@ h2 {
     width: 44px;
     height: 44px;
   }
+}
+/* =========================================
+   БЛОК КОНТАКТОВ (CTA)
+   ========================================= */
+.cta-block {
+  background-color: #2A3644; /* Ваш выбранный темно-синий цвет */
+  border-radius: 24px;
+  padding: 64px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 40px;
+  margin-bottom: 32px;
+  border: 1px solid rgba(245, 245, 245, 0.05); /* Еле заметная рамка для объема */
+}
+
+.cta-content h2 {
+  color: #FFFFFF;
+  margin-top: 0;
+  margin-bottom: 16px;
+  font-size: clamp(32px, 4vw, 48px);
+  line-height: 1.1;
+  letter-spacing: -.02em;
+}
+
+.cta-content p {
+  color: #A0AAB5; /* Светло-серый, чтобы текст не сливался */
+  font-size: 18px;
+  margin: 0;
+  max-width: 500px;
+  line-height: 1.5;
+}
+
+.cta-actions {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+  align-items: center; /* <--- Вот это выравнивает кнопку и ссылку по центру */
+}
+
+/* Белые кнопки с синим текстом */
+.button-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 12px;
+  padding: 16px 24px;
+  background: #F5F5F5; /* Белый фон */
+  color: #1E2329; /* Ваш синий акцент для текста */
+  border: none;
+  border-radius: 12px;
+  font-size: 15px;
+  font-weight: 600;
+  text-decoration: none;
+  transition: transform 0.2s ease, background 0.2s ease;
+
+  margin-top: 32px; /* <--- ДОБАВИТЬ ЭТУ СТРОКУ для отступа от текста */
+}
+
+.button-cta:hover {
+  background: #E0E0E0; /* Чуть темнее белого, чтобы было видно наведение */
+  transform: translateY(-2px); /* Легкий подскок вверх */
+}
+
+/* Адаптив для мобильных (чтобы блок не ломался) */
+@media (max-width: 900px) {
+  .cta-block {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 40px;
+    gap: 32px;
+  }
+  .cta-actions {
+  display: flex;
+  gap: 24px;
+  flex-shrink: 0;
+  align-items: center; /* <--- Вот это выравнивает кнопку и ссылку по центру */
+}
+  .button-cta {
+    width: 100%;
+    justify-content: center;
+  }
+}
+/* Ссылка Email */
+.cta-link {
+  display: inline-flex;
+  align-items: center;
+  color: #F5F5F5; 
+  font-size: 16px;
+  font-weight: 500;
+  text-decoration: none;
+  border-bottom: 1px solid #F5F5F5; 
+  padding-bottom: 2px;
+  margin-top: 0; /* Убираем лишний сдвиг */
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.cta-link:hover {
+  color: #A0AAB5; /* Светло-серый цвет текста */
+  border-color: #A0AAB5; /* Светло-серая линия подчеркивания */
+}
+/* Выравниваем кнопки в блоке контактов по центру */
+.cta-actions {
+  display: flex;
+  gap: 24px;
+  align-items: center;
+}
+
+/* Переопределяем отступ для кнопки ТОЛЬКО внутри блока контактов */
+.cta-block .button-cta {
+  margin-top: 0; /* Убираем прилипание в контактах */
+}
+
+/* Переопределяем отступ для ссылки ТОЛЬКО внутри блока контактов */
+.cta-block .cta-link {
+  margin-top: 0;
 }
