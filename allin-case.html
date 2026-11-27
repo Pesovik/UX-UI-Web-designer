@@ -154,6 +154,64 @@
       padding: 0;
       display: block;
     }
+        /* Сетка для карточек проблем */
+    .problems-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+      margin-top: 32px;
+    }
+
+    /* Стиль самой карточки */
+    .problem-card {
+      background: #252A30; /* Чуть светлее фона */
+      border: 1px solid rgba(245, 245, 245, 0.05); /* Еле заметная рамка */
+      border-radius: 16px;
+      padding: 32px;
+      display: flex;
+      flex-direction: column;
+      gap: 16px;
+    }
+
+    /* Заголовок с точкой */
+    .problem-card-header {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+    }
+
+    .problem-dot {
+      width: 12px;
+      height: 12px;
+      border-radius: 50%;
+      flex-shrink: 0;
+    }
+
+    .dot-red {
+      background: #C77F7F; /* Приглушенный красный (как на скриншоте) */
+      box-shadow: 0 0 0 4px rgba(199, 127, 127, 0.15); /* Легкое свечение */
+    }
+
+    .problem-card h3 {
+      margin: 0;
+      font-size: 20px;
+      font-weight: 500;
+      color: var(--primary);
+    }
+
+    .problem-card p {
+      margin: 0;
+      font-size: 16px;
+      line-height: 1.6;
+      color: var(--secondary);
+    }
+
+    /* Адаптив для мобильных */
+    @media (max-width: 900px) {
+      .problems-grid {
+        grid-template-columns: 1fr; /* В одну колонку */
+      }
+    }
 
     /* Адаптив */
     @media (max-width: 900px) {
@@ -231,23 +289,36 @@
         <!-- Проблемы -->
         <div class="case-section">
           <h2>Three product problems shaped the redesign</h2>
+                  <div class="case-section">
+         
           
-          <div class="problem-item">
-            <span class="problem-number">01</span>
-            <h3>Fragmented data across platforms</h3>
-            <p>Investors lack a unified view of their assets because their data is spread across different brokers and apps. Users cannot connect assets not linked to APIs (e.g., cash, real estate) in a single app.</p>
-          </div>
+          <div class="problems-grid">
+            <!-- Карточка 1 -->
+            <div class="problem-card">
+              <div class="problem-card-header">
+                <span class="problem-dot dot-red"></span>
+                <h3>Fragmented data</h3>
+              </div>
+              <p>Investors lack a unified view of their assets because their data is spread across different brokers and apps. Users cannot connect assets not linked to APIs (e.g., cash, real estate).</p>
+            </div>
 
-          <div class="problem-item">
-            <span class="problem-number">02</span>
-            <h3>Dense content without hierarchy</h3>
-            <p>Financial data is inherently complex. Charts, numbers, and metrics often compete for attention, making it hard for users to understand their portfolio's overall health at a glance.</p>
-          </div>
+            <!-- Карточка 2 -->
+            <div class="problem-card">
+              <div class="problem-card-header">
+                <span class="problem-dot dot-red"></span>
+                <h3>Dense content</h3>
+              </div>
+              <p>Financial data is inherently complex. Charts, numbers, and metrics often compete for attention, making it hard to understand overall health at a glance.</p>
+            </div>
 
-          <div class="problem-item">
-            <span class="problem-number">03</span>
-            <h3>Unclear risk and profitability</h3>
-            <p>Users struggle to understand their portfolio risk and future profitability without the help of a financial advisor. The app needed to provide clear, AI-driven insights.</p>
+            <!-- Карточка 3 -->
+            <div class="problem-card">
+              <div class="problem-card-header">
+                <span class="problem-dot dot-red"></span>
+                <h3>Unclear risk</h3>
+              </div>
+              <p>Users struggle to understand their portfolio risk and future profitability without a financial advisor. The app needed clear, AI-driven insights.</p>
+            </div>
           </div>
         </div>
 
