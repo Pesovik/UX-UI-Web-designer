@@ -3,7 +3,7 @@
 :root {
   --background: #1E2329;
   --primary: #F5F5F5;
-  --secondary: #8A8A8A;
+  --secondary: #B7BEC7;
   --accent: #45657E;
   --gutter: clamp(24px, 7vw, 100px);
 }
@@ -163,7 +163,7 @@ h1 {
 }
 
 /* =========================================
-   НОВЫЙ ФОРМАТ КЕЙСОВ (КАК У ANTON NEVIN)
+   НОВЫЙ ФОРМАТ КЕЙСОВ 
    ========================================= */
 
 .work-grid {
@@ -345,7 +345,7 @@ h1 {
 
 h2 {
   margin: 32px 0 14px;
-  font-size: clamp(36px, 5vw, 64px);
+  font-size: clamp(36px, 5vw, 48px);
   font-weight: 500;
   letter-spacing: -.04em;
 }
@@ -560,4 +560,61 @@ h2 {
 /* Переопределяем отступ для ссылки ТОЛЬКО внутри блока контактов */
 .cta-block .cta-link {
   margin-top: 0;
+}
+/* =========================================
+   СТИЛИ ДЛЯ БЛОКА ОБРАЗОВАНИЯ
+   ========================================= */
+
+/* Заголовок секции */
+.detail-title {
+  font-family: 'Manrope', sans-serif;
+  font-size: 28px; /* Как вы просили */
+  font-weight: 500;
+  color: var(--primary);
+  margin-bottom: 24px; /* Отступ от заголовка до списка */
+  text-transform: none; /* Убираем капс, если он был */
+  border-bottom: none; /* Убираем линию, если она была */
+  padding-bottom: 0;
+}
+
+/* Контейнер для всего списка */
+.education-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* Отступ между секциями (ВУЗами/курсами) */
+}
+
+/* Одна секция (ВУЗ/Курс) */
+.edu-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* Отступ между строчками внутри секции */
+}
+
+/* Название учебного заведения */
+.edu-school {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px; /* Как вы просили */
+  font-weight: 600; /* Жирный */
+  color: var(--primary);
+  line-height: 1.4;
+}
+
+/* Название курса */
+.edu-course {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px; /* Как вы просили */
+  font-weight: 400;
+  color: var(--secondary);
+  line-height: 1.4;
+}
+
+/* Даты */
+.edu-date {
+  font-family: 'Manrope', sans-serif;
+  font-size: 16px; /* Такой же размер, как у .edu-course */
+  font-weight: 400; /* Такой же вес, как у .edu-course */
+  color: var(--secondary); /* Такой же цвет, как у .edu-course */
+  line-height: 1.4;
+  /* Убрали opacity: 0.7, чтобы цвет был насыщенным */
 }
