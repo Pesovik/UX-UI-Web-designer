@@ -518,7 +518,7 @@ h2 {
   flex-shrink: 0;
   align-items: center; /* <--- Вот это выравнивает кнопку и ссылку по центру */
 }
-  .button-cta {
+    .cta-block .button-cta {
     width: 100%;
     justify-content: center;
     margin-top: 0;
