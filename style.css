@@ -213,7 +213,7 @@ h1 {
 
 .project-heading {
   margin: 0 0 16px;
-  font-size: clamp(24px, 3vw, 36px);
+  font-size: clamp(24px, 3vw, 32px);
   font-weight: 500;
   line-height: 1.2;
   letter-spacing: -.02em;
@@ -223,30 +223,29 @@ h1 {
 .project-summary {
   margin: 0 0 24px;
   color: var(--secondary);
-  font-size: 16px;
+  font-size: 18px;
   line-height: 1.6;
 }
 
 .project-metrics {
   display: flex;
-  flex-wrap: wrap;
-  gap: 16px;
+  flex-direction: column; /* <--- Выстраиваем строго в колонку */
+  align-items: flex-start; /* Прижимаем к левому краю */
+  gap: 8px; /* Отступ между строчками (8px) */
   margin-bottom: 32px;
 }
 
 .project-metrics span {
   font-size: 14px;
-  font-weight: 500;
-  color: var(--primary);
+  font-weight: 400;
+  color: var(--secondary);
   display: flex;
   align-items: center;
   gap: 6px;
 }
 
 .project-metrics span::before {
-  content: '✓';
-  color: var(--accent);
-  font-weight: 700;
+ content: none; /* <--- Вот эта строка убирает иконку */
 }
 
 .project-visual {
