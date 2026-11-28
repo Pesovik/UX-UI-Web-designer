@@ -670,3 +670,11 @@ h2 {
   padding-left: 48px;
   padding-right: 48px;
 }
+@media (max-width: 900px) {
+  /* Стили ТОЛЬКО для кнопки на главном экране (Hero) */
+  .hero .button-cta {
+    width: auto; /* Отменяем растягивание на всю ширину */
+    margin-top: 32px; /* Возвращаем отступ от текста */
+    /* padding: 16px 40px; <- если нужно, чтобы она была чуть шире */
+  }
+}
