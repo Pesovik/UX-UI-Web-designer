@@ -177,7 +177,7 @@ h1 {
   display: grid;
   grid-template-columns: 1fr 1.2fr;
   gap: 48px;
-  align-items: center;
+  align-items: stretch;
   background: rgb(245 245 245 / 3%);
   border-radius: 24px;
   padding: 48px;
@@ -193,6 +193,7 @@ h1 {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
+  height: 100%;
 }
 
 .project-tags {
@@ -229,9 +230,9 @@ h1 {
 
 .project-metrics {
   display: flex;
-  flex-direction: column; /* <--- Выстраиваем строго в колонку */
-  align-items: flex-start; /* Прижимаем к левому краю */
-  gap: 8px; /* Отступ между строчками (8px) */
+  flex-direction: column; 
+  align-items: flex-start; 
+  gap: 8px; 
   margin-bottom: 32px;
 }
 
@@ -245,7 +246,7 @@ h1 {
 }
 
 .project-metrics span::before {
- content: none; /* <--- Вот эта строка убирает иконку */
+ content: none; 
 }
 
 .project-visual {
@@ -286,13 +287,7 @@ h1 {
   min-width: 0;
 }
 
-.about-text p {
-  margin-bottom: 20px;
-}
 
-.about-text p:last-child {
-  margin-bottom: 0;
-}
 
 .detail-group {
   margin-bottom: 40px;
@@ -616,4 +611,58 @@ h2 {
   color: var(--secondary); /* Такой же цвет, как у .edu-course */
   line-height: 1.4;
   /* Убрали opacity: 0.7, чтобы цвет был насыщенным */
+}
+/* Прижимаем кнопку в карточке кейса к нижнему краю */
+.project-card-large .button {
+  margin-top: auto;
+}
+/* =========================================
+   РЕВЕРС КАРТОЧЕК (ЗИГЗАГ)
+   ========================================= */
+
+/* Если у карточки есть класс .reverse, меняем колонки местами */
+.project-card-large.reverse .project-visual {
+  order: -1; /* Ставит картинку на первое место (влево) */
+}
+
+/* На мобильных устройствах отменяем реверс, чтобы картинка всегда была сверху */
+@media (max-width: 900px) {
+  .project-card-large.reverse .project-visual {
+    order: 0; 
+  }
+}
+/* Контейнер для списка навыков (расстояние между блоками) */
+.skills-list {
+  display: flex;
+  flex-direction: column;
+  gap: 24px; /* 24px между Design & tools, Working style и Languages */
+}
+
+/* Один блок навыка */
+.skill-item {
+  display: flex;
+  flex-direction: column;
+  gap: 4px; /* 4px между заголовком и текстом */
+}
+
+/* Заголовок навыка (Design & tools) */
+.skill-name {
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--primary);
+  margin: 0; /* Жестко убираем отступы по умолчанию у h4 */
+}
+
+/* Текст описания навыка */
+.skill-desc {
+  font-size: 16px;
+  font-weight: 400;
+  color: var(--secondary);
+  line-height: 1.5;
+  margin: 0; /* Жестко убираем отступы по умолчанию у p */
+}
+/* Увеличиваем отступы ТОЛЬКО у кнопки Let's talk на главном экране */
+.btn-hero-talk {
+  padding-left: 48px;
+  padding-right: 48px;
 }
